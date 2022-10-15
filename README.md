@@ -17,9 +17,9 @@ This is a team project that is part of the one year software engineering intensi
 
 - Print a string to the standard output according to format
 - Files were created using vim
-- All files were compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+- All files were compiled on `Ubuntu 20.04 LTS` using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - The codes comply with [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl), [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl)
-- Function can be invoked as: printf("format string", args, ...) where format string can contain conversion specifiers, flags, and regular characters
+- Function can be invoked as: `_printf("format string", args, ...)` where `format string` can contain conversion specifiers, flags, and regular characters
 - On success, the function returns the number of characters in the output string or -1 when it fails.
 
 ## Contributors

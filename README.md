@@ -24,4 +24,4 @@ This is a team project that is part of the one year software engineering intensi
 
 ## Contributors
 - [Emmanuel Enchill](https://github.com/Ashdof/)
-- [Prince Mireku]()
+- [Prince Mireku](https://github.com/DevFreak-ui)

@@ -11,7 +11,7 @@ This is a team project that is part of the one year software engineering intensi
 - Identifying suitable workflow for effective project execution
 
 ## Function Prototype
-<int _printf(const char *format, ...);>
+`int _printf(const char *format, ...);`
 
 ## Usage
 

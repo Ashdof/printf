@@ -16,7 +16,9 @@ int _printf(const char *format, ...)
 	spec_t specs[] = {
 		{"c", scriptChar},
 		{"s", scriptString},
-		{"%", scriptPercent}
+		{"%", scriptPercent},
+		{"d", scriptSignedDigits},
+		{"i", scriptSignedDigits}
 	};
 	int done;
 	va_list args;

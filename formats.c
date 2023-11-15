@@ -50,7 +50,50 @@ int scriptString(va_list args)
 int scriptPercent(__attribute__((unused)) va_list args)
 {
 	char mod = '%';
+
 	_script(mod);
 
 	return (1);
+}
+
+/**
+ * scriptSignedDigits - print a negative number
+ * @args: variable length arguments
+ *
+ * description: this function prints a series of negative digits
+ *
+ * Return: number of digits printed
+ */
+
+int scriptSignedDigits(va_list args)
+{
+	int num, len = 0, div = 1;
+	unsigned int value;
+
+	num = va_arg(args, int);
+
+	/** handle negative values */
+	if (num < 0)
+	{
+		len += _script('-');
+		value = num * -1;
+	}
+	else
+		value = num;
+
+	/**
+	 * compute value for divisor for which first digits from
+	 * the left of value can be obtained
+	 */
+	while (value / div > 9)
+		div *= 10;
+
+	/** compute and print one digit at a time from left */
+	for (; div != 0; div /= 10)
+	{
+		len += _script('0' + value / div);
+		value %= div;
+	}
+
+	return (len);
 }

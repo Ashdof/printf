@@ -5,6 +5,13 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+/**
+ * specs - a structure
+ * @specs: a pointer to a space in memory
+ * @action: a function pointer
+ *
+ * description: this is a structure
+ */
 struct specs
 {
 	char *specs;

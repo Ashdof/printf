@@ -4,7 +4,7 @@
  * dissect - analayse arguments and execute appropriate action
  * @vl: a variable length argument of type va_list.
  * @format: a pointer to the string of characters to analayse
- * @specs: a struct of type specs
+ * @spec: a struct of type specs
  *
  * description: this function takes a variable length argument  of
  * type va_list, accesses each argument and compares it with value
@@ -24,11 +24,8 @@ int dissect(va_list vl, const char *format, spec_t spec[])
 		if (format[i] == '%')
 		{
 			i++;
-			
-			/** loop through array of specifiers
-			 * to find a matching pair
-			 */
 
+			/** loop and find a matching pair */
 			for (j = 0; spec[j].specs != NULL; j++)
 			{
 				if (format[i] == spec[j].specs[0])

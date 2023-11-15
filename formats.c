@@ -106,7 +106,7 @@ int scriptSignedDigits(va_list args)
  *
  * Return: number of digits printed
  */
- 
+
 int scriptUnsignedDigits(va_list args)
 {
 	int len = 0, div = 1;

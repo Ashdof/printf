@@ -19,6 +19,7 @@ int scriptPercent(va_list);
 int dissect(va_list, const char *, spec_t *);
 int _printf(const char *, ...);
 int scriptSignedDigits(va_list);
+int scriptUnsignedDigits(va_list);
 
 /* Miscellaneous functions */
 void scriptBinaryChars(char *);

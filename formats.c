@@ -97,3 +97,39 @@ int scriptSignedDigits(va_list args)
 
 	return (len);
 }
+
+/**
+ * scriptUnsignedDigits - print a positive number
+ * @args: variable length arguments
+ *
+ * description: this function prints a series of positive digits
+ *
+ * Return: number of digits printed
+ */
+ 
+int scriptUnsignedDigits(va_list args)
+{
+	int len = 0, div = 1;
+	unsigned int value;
+
+	/** obtain values of variable length */
+	value = va_arg(args, int);
+	if (value < 1)
+		return (-1);
+
+	/**
+	 * compute value for divisor for which the first digits from
+	 * the left of value can be obtained
+	 */
+	while (value / div > 9)
+		div *= 10;
+
+	/** compute and print one digit at a time from left */
+	for (; div != 0; div /= 10)
+	{
+		len += _script('0' + value / div);
+		value %= div;
+	}
+
+	return (len);
+}

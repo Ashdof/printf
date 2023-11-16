@@ -9,7 +9,7 @@
  * Return: nothing
  */
 
-void scriptBinaryChars(char *str)
+void scriptStringChars(char *str)
 {
 	int i;
 

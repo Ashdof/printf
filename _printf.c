@@ -18,7 +18,10 @@ int _printf(const char *format, ...)
 		{"s", scriptString},
 		{"%", scriptPercent},
 		{"d", scriptSignedDigits},
-		{"i", scriptSignedDigits}
+		{"i", scriptSignedDigits},
+		{"b", scriptBinary},
+		{"u", scriptUnsignedDigits},
+		{"o", scriptOctal}
 	};
 	int done;
 	va_list args;

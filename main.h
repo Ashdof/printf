@@ -27,9 +27,11 @@ int dissect(va_list, const char *, spec_t *);
 int _printf(const char *, ...);
 int scriptSignedDigits(va_list);
 int scriptUnsignedDigits(va_list);
+int scriptOctal(va_list);
+int scriptBinary(va_list);
 
 /* Miscellaneous functions */
-void scriptBinaryChars(char *);
+void scriptStringChars(char *);
 char *invertString(char *);
 char *_strncpy(char *, char *, int);
 unsigned int computeBaseLength(unsigned int, int);

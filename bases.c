@@ -151,3 +151,47 @@ int scriptHex(va_list args)
 
 	return (size);
 }
+
+/**
+ * scriptHEX - print hexadecimal values in uppercase
+ * @args: a variable length arguments
+ *
+ * description: this function converts a decimal number to
+ * hexadecimal values in uppercase and prints them
+ *
+ * Return: number of hexadecimal characters printed
+ */
+
+int scriptHEX(va_list args)
+{
+        unsigned int values;
+        int size, i;
+        char *mem;
+
+        values = va_arg(args, unsigned int);
+        if (values == 0)
+                return (_script('0'));
+        if (values < 1)
+                return (-1);
+
+        size = computeBaseLength(values, 16);
+        mem = malloc(sizeof(char) * size + 1);
+        if (mem == NULL)
+                return (-1);
+
+        for (i = 0; i < size; i++)
+        {
+                mem[i] = values % 16;
+                values /= 16;
+        }
+
+        for (i = size - 1; i >= 0; i--)
+        {
+                if (mem[i] > 9)
+                        mem[i] += 7;
+                _script(mem[i] + '0');
+        }
+        free(mem);
+
+        return (size);
+}

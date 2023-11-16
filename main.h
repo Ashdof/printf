@@ -30,6 +30,7 @@ int scriptUnsignedDigits(va_list);
 int scriptOctal(va_list);
 int scriptBinary(va_list);
 int scriptHex(va_list);
+int scriptHEX(va_list);
 
 /* Miscellaneous functions */
 void scriptStringChars(char *);

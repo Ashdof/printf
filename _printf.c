@@ -22,7 +22,8 @@ int _printf(const char *format, ...)
 		{"b", scriptBinary},
 		{"u", scriptUnsignedDigits},
 		{"o", scriptOctal},
-		{"x", scriptHex}
+		{"x", scriptHex},
+		{"X", scriptHEX}
 	};
 	int done;
 	va_list args;

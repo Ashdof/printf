@@ -31,3 +31,48 @@ char *invertString(char *str)
 
 	return (mem);
 }
+
+/**
+ * scriptNonAscii - print non-printable characters
+ * @args: a variable length arguments
+ *
+ * description: this function prints non-ASCII characters in
+ * hexadecimal uppercase values
+ *
+ * Return: number of characters printed
+ */
+
+int scriptNonAscii(va_list args)
+{
+	int hex, i, size = 0;
+	char *p;
+
+	p = va_arg(args, char *);
+	if (p == NULL)
+		p = "(nil)";
+
+	for (i = 0; p[i] != '\0'; i++)
+	{
+		if (p[i] < 32 || p[i] >= 127)
+		{
+			_script('\\');
+			_script('x');
+			size += 2;
+			hex = p[i];
+
+			if (hex < 16)
+			{
+				_script('0');
+				size++;
+			}
+			size += scriptHEXN(hex);
+		}
+		else
+		{
+			_script(p[i]);
+			size++;
+		}
+	}
+
+	return (size);
+}

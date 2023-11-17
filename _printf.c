@@ -23,7 +23,9 @@ int _printf(const char *format, ...)
 		{"u", scriptUnsignedDigits},
 		{"o", scriptOctal},
 		{"x", scriptHex},
-		{"X", scriptHEX}
+		{"X", scriptHEX},
+		{"S", scriptNonAscii},
+		{"p", scriptAddress}
 	};
 	int done;
 	va_list args;

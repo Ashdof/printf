@@ -31,6 +31,10 @@ int scriptOctal(va_list);
 int scriptBinary(va_list);
 int scriptHex(va_list);
 int scriptHEX(va_list);
+int scriptNonAscii(va_list);
+int scriptHEXN(unsigned int);
+int scriptAddress(va_list);
+int scriptHexn(unsigned long int);
 
 /* Miscellaneous functions */
 void scriptStringChars(char *);

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * scriptBinaryChars - print binary values
+ * scriptStringChars - print binary values
  * @str: a pointer to the binary values
  *
  * description: this function prints binary values

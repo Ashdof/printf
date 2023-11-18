@@ -26,7 +26,8 @@ int _printf(const char *format, ...)
 		{"X", scriptHEX},
 		{"S", scriptNonAscii},
 		{"p", scriptAddress},
-		{"r", scriptInvertString}
+		{"r", scriptInvertString},
+		{"R", scriptRot13String}
 	};
 	int done;
 	va_list args;

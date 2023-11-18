@@ -37,9 +37,11 @@ int scriptHEXN(unsigned int);
 int scriptAddress(va_list);
 int scriptHexn(unsigned long int);
 int scriptInvertString(va_list);
+int scriptRot13String(va_list);
 
 /* Miscellaneous functions */
 int _strlen(char *);
+char *rot13String(char *);
 void scriptStringChars(char *);
 char *invertString(char *);
 char *_strncpy(char *, char *, int);

@@ -78,3 +78,37 @@ unsigned int computeBaseLength(unsigned int value, int base)
 
 	return (i);
 }
+
+/**
+ * rot13String - encript a string
+ * @s: a pointer to the string to encript
+ *
+ * description: this function encripts a string by rotating the
+ * characters by 13 places
+ *
+ * Return: a pointer to the encripted string
+ */
+
+char *rot13String(char *s)
+{
+	int i, j = 0;
+	char *letas = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqr \
+		       stuvwxyz";
+	char *keys = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcde \
+		       fghijklm";
+
+	while (s[j])
+	{
+		for (i = 0; i < 52; i++)
+		{
+			if (s[j] == letas[i])
+			{
+				s[j] = keys[i];
+				break;
+			}
+		}
+		j++;
+	}
+
+	return (s);
+}

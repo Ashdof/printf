@@ -111,3 +111,38 @@ int scriptInvertString(va_list args)
 
 	return (size);
 }
+
+/**
+ * scriptRot13String - print an encripted string
+ * @args: a variable length arguments
+ *
+ * description: this function prints a string that has been encripted
+ * with the rot13 technique
+ *
+ * Return: number of characters printed
+ */
+
+int scriptRot13String(va_list args)
+{
+	int i, size;
+	char *mem, *str;
+
+	str = va_arg(args, char *);
+	if (str == NULL)
+		str = "(nil)";
+	size = _strlen(str);
+
+	mem = malloc(sizeof(char) * size + 1);
+	if (mem == NULL)
+		return (-1);
+	for (i = 0; str[i] != '\0'; i++)
+		mem[i] = str[i];
+	mem[i] = '\0';
+
+	mem = rot13String(mem);
+	for (i = 0; mem[i] != '\0'; i++)
+		_script(mem[i]);
+	free(mem);
+
+	return (size);
+}

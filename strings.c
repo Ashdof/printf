@@ -76,3 +76,38 @@ int scriptNonAscii(va_list args)
 
 	return (size);
 }
+
+/**
+ * scriptInvertString - reverse a string
+ * @args: a variable length argument
+ *
+ * description: this function reverses a string and prints its
+ * characters
+ *
+ * Return: number of characters printed
+ */
+
+int scriptInvertString(va_list args)
+{
+	int size, i;
+	char *mem, *str;
+
+	str = va_arg(args, char *);
+	if (str == NULL)
+		str = "(nil)";
+
+	size = _strlen(str);
+	mem = malloc(sizeof(char) * size + 1);
+	if (mem == NULL)
+		return (-1);
+
+	for (i = 0; str[i] != '\0'; i++)
+		mem[i] = str[i];
+	mem[i] = '\0';
+
+	for (i = size - 1; i >= 0; i--)
+		_script(mem[i]);
+	free(mem);
+
+	return (size);
+}

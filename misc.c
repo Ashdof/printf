@@ -40,6 +40,26 @@ char *_strncpy(char *dest, char *src, int n)
 }
 
 /**
+ * _strlen - compute length of string
+ * @s: a pointer to the string
+ *
+ * description: this function computes the length of a string
+ * pointed to by s
+ *
+ * Return: number of characters as length
+ */
+
+int _strlen(char *s)
+{
+	char *p = s;
+
+	while (*p)
+		p++;
+
+	return (p - s);
+}
+
+/**
  * computeBaseLength - compute length
  * @value: the value to compute its length
  * @base: the base value

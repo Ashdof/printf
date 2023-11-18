@@ -6,11 +6,12 @@
 #include <unistd.h>
 
 /**
- * specs - a structure
- * @specs: a pointer to a space in memory
- * @action: a function pointer
+ * specs - a struct for specifiers
+ * @specs: a pointer to the specifier
+ * @action: a function pointer to the function to execute
  *
- * description: this is a structure
+ * Description: a structure for determining the type of function to
+ * invoke based on the given specifier
  */
 struct specs
 {
@@ -35,8 +36,10 @@ int scriptNonAscii(va_list);
 int scriptHEXN(unsigned int);
 int scriptAddress(va_list);
 int scriptHexn(unsigned long int);
+int scriptInvertString(va_list);
 
 /* Miscellaneous functions */
+int _strlen(char *);
 void scriptStringChars(char *);
 char *invertString(char *);
 char *_strncpy(char *, char *, int);
